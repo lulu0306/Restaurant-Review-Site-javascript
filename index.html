@@ -1,6 +1,14 @@
+
+
 <!DOCTYPE >
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <title>API MAPS</title>
   <style type="text/css">
     *{
@@ -8,25 +16,60 @@
       padding: 0px;
     }
     #map{
-      height: 100%;     
+      height: 100%; 
+      border: 5px solid mediumspringgreen
     }
 
     .title{
       text-align: center;
       color:grey;
     }
+
+    h1{
+    background-color: mediumseagreen;
+    padding: 15px;
+    border:5px solid black;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+.icon-right{
+    height: 45px;
+    position: absolute;
+    top: 10px;
+	left:10px;
+}
+
+.icon-left{
+    height: 45px;
+    position: absolute;
+    top: 10px;
+	right:10px;
+}
+
+h2{
+  text-align: center
+}
   </style>
 </head>
 <body>
   <header>
-    <h1 class="title">LUCIANA'S RESTAURANT REVIEWS</h1>
+      <h1>
+      <img src='./images/icon1.png'  class="icon-right">
+          Luciana Restauran's Reviews
+      <img src='./images/icon2.png' class="icon-left">
+       </h1>
   </header>  
-  <main>
-    <div id="search">
-    </div>
-  <div id="map">
-  </div>
-  </main>
+    <div class="row">
+  <div class="col-md-9">
+  <div id="map"></div>
+</div>
+<div class="col-md-3">
+<h2>Restaurants</h2>
+</div>
+</div>
 <script src="script.js"></script>
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb1UxYT38wOHUlhChJvWibXiYNNDpeAAI&v=3&callback=initMap">

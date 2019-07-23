@@ -1,34 +1,39 @@
-var map, infoWindow;
-function initMap(){
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 6
-  });
-  infoWindow = new google.maps.InfoWindow;
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
-      infoWindow.open(map);
-      map.setCenter(pos);
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
-  } else {
-    handleLocationError(false, infoWindow, map.getCenter());
+// JS Geolocation method, to find user current location
+function initMap() {
+  let currentPosition = {
+      lat: 0,
+      lng: 0,
+  };
+
+  const mapOptions = {
+      center: currentPosition,
+      zoom: 15,
+      streetViewControl: false,
+    
   }
-}
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
-  infoWindow.open(map);
-}
 
+  const map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
+  const infoWindow = new google.maps.InfoWindow({
+      content: document.getElementById('information')
+  });
+  // JS Geolocation method, to find user current location
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
 
+          currentPosition = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+          };
+
+          infoWindow.setPosition(currentPosition);
+          map.setCenter(currentPosition);
+
+          //adds marker of your current position (arrow)
+          let marker = new google.maps.Marker({
+              position: currentPosition,
+          });
+          marker.setMap(map);
+        
+       
+        })}}
