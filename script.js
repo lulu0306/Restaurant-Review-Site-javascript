@@ -32,11 +32,27 @@ function initMap() {
           marker.setMap(map);       
         })}}
 
-
+// get json data on the console
         fetch("./list.json")
         .then(function(resp){
-           return resp.json
+           return resp.json()
         })
         .then(function(data){
-          console.log(data)
+          console.log(data[0].address)
         })
+
+
+
+      function restaurantList(data){
+        data.forEach(i => {
+          return i.name
+        });
+      }
+    
+        //pseudo code 
+        // 1. show map on the screen
+        // 2. get the user current location
+        // 3. create a json file with an array of restaurants 
+        // 4. get the json file on the javascript file 
+        // 5. function to get the restaurant name and score 
+          // 5.1 get the name of each restaurant 

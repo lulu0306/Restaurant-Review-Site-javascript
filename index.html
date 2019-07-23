@@ -17,7 +17,8 @@
     }
     #map{
       height: 100%; 
-      border: 5px solid mediumspringgreen
+      border: 5px solid mediumspringgreen;
+    
     }
 
     .title{
@@ -39,7 +40,7 @@
     height: 45px;
     position: absolute;
     top: 10px;
-	left:10px;
+	  left:10px;
 }
 
 .icon-left{
@@ -52,21 +53,27 @@
 h2{
   text-align: center
 }
+
+
   </style>
 </head>
 <body>
   <header>
-      <h1>
+    <div>
+      <h1 class="row">
+        <div class="col-md-12">
       <img src='./images/icon1.png'  class="icon-right">
           Luciana Restauran's Reviews
       <img src='./images/icon2.png' class="icon-left">
        </h1>
+      </div>
+      </div>
   </header>  
     <div class="row">
   <div class="col-md-9">
   <div id="map"></div>
 </div>
-<div class="col-md-3">
+<div class="col-md-3 list">
 <h2>Restaurants</h2>
 <div id='restaurants'></div>
 </div>
