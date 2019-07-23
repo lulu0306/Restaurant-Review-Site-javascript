@@ -1,0 +1,43 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#map{
+  height: 100%;
+  border:5px solid mediumspringgreen;
+}
+
+.title{
+  text-align: center;
+
+}
+
+.icon-right{
+  height: 45px;
+  position: absolute;
+  top: 10px;
+left:10px;
+}
+
+.icon-left{
+  height: 45px;
+  position: absolute;
+  top: 10px;
+right:10px;
+}
+
+h1{
+  background-color: mediumseagreen;
+  border: 5px solid black;
+  padding: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h2{
+text-align: center
+}
+
+.restaurants{
+margin-top: 0px;
+}
