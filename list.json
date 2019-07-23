@@ -1,0 +1,66 @@
+ [
+   {
+      "restaurantName":"Baran",
+      "address":"Frankfurter Str. 21, 63688 Gedern",
+      "lat":50.423919,
+      "long":9.1965460,
+      "ratings":[
+         {
+            "stars":4,
+            "comment":"Great! But not many veggie options."
+         },
+         {
+            "stars":5,
+            "comment":"My favorite restaurant!"
+         }
+      ]
+   },
+   {
+      "restaurantName":"Pizza & Restaurant Calabria",
+      "address":"Lauterbacher Str. 19, 63688 Gedern",
+      "lat":50.426298,
+      "long":9.199283,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   },
+   {
+      "restaurantName":"La Roma",
+      "address":"Otto-Müller-Straße 20, 63688 Gedern",
+      "lat":50.422934,
+      "long": 9.203412,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   },
+   {
+      "restaurantName":"Hong Kong Asia Schnell Imbiss",
+      "address":"Frankfurter Str. 23, 63688 Gedern",
+      "lat":50.423536,
+      "long":9.196975,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Best Chinese food!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   }
+]
