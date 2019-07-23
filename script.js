@@ -33,6 +33,10 @@ function initMap() {
         })}}
 
 
-        $.getJSON( "list.json", function( json ) {
-          console.log( "JSON Data received, Restaurant name is  " + json);
-      });
+        fetch("./list.json")
+        .then(function(resp){
+           return resp.json
+        })
+        .then(function(data){
+          console.log(data)
+        })
